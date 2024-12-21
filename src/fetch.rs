@@ -266,7 +266,7 @@ impl DashDownloader {
             record_metainformation: true,
             muxer_preference: HashMap::new(),
             concat_preference: HashMap::new(),
-            decryptor_preference: String::from("mp4decrypt"),
+            decryptor_preference: String::from("shaka"),
             ffmpeg_location: String::from("ffmpeg"),
 	    vlc_location: if cfg!(target_os = "windows") {
                 // The official VideoLan Windows installer doesn't seem to place its installation
@@ -284,7 +284,7 @@ impl DashDownloader {
                 String::from("mp4box")
             },
             mp4decrypt_location: String::from("mp4decrypt"),
-            shaka_packager_location: String::from("shaka-packager"),
+            shaka_packager_location: String::from("packager"),
         }
     }
 
